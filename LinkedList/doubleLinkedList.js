@@ -64,6 +64,9 @@ class DoubleLinkedList{
         }
         
     }
+    reverse(){
+        
+    }
     print(){
         let current=this.head
         while(this.head==null){

@@ -24,7 +24,7 @@ class LinkedList{
         }
         return this
     }
-    reverse(){
+    iterativeReverse(){
         let current=this.head
         let prev=null
         while(current){
@@ -35,6 +35,17 @@ class LinkedList{
         }
         this.head=prev
         return this
+    }
+    recursiveReverse(current){
+        if(!current){
+            return;
+        }
+        current=this.head
+        let prev=null
+        let temp=current.next
+        current.next=prev
+        prev=current
+        this.recursiveReverse(temp)
     }
     print() {
         let current = this.head;
