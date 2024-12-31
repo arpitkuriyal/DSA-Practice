@@ -29,6 +29,8 @@ function reverseString(str) {
     return reverseString(str.slice(1)) + str[0]
 
 }
+
+
 function palindrome(arr=[]){
     if(arr.length<=1){
         return true
@@ -38,17 +40,35 @@ function palindrome(arr=[]){
     }
     return palindrome(arr)
 }
+
+
 function sumofdigit(n){
     if(n<=0){
         return 0 ;
     }
     return n%10 + sumofdigit(Math.floor(n/10))
 }
+
+
 function findMax(arr = []) {
     if (arr.length === 0) {
         return Number.NEGATIVE_INFINITY; 
     }
     let maxOfRest = findMax(arr.slice(1)); 
     return Math.max(arr[0], maxOfRest); 
+}
+
+function binarySearch(arr=[],target,left=0,right=arr.length-1){
+    let mid=Math.floor((left+right)/2)
+    if(left>right){
+        return false
+    }
+    if(arr[mid]==target){
+        return true
+    }
+    if(arr[mid]>target){
+        return binarySearch(arr,left,mid-1,target)
+    }
+    return binarySearch(arr,mid+1,right,target)
 }
 
