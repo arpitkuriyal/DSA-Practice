@@ -42,12 +42,21 @@ function palindrome(arr=[]){
 }
 
 
-function sumofdigit(n){
+function sumOfdigit(n){
     if(n<=0){
         return 0 ;
     }
-    return n%10 + sumofdigit(Math.floor(n/10))
+    return n%10 + sumOfdigit(Math.floor(n/10))
 }
+
+function reverseNumber(n,m=0){
+    if(n<=0){
+        return m;
+    }
+    m=m*10+(n%10)
+    return reverseNumber(Math.floor(n/10),m)
+}
+console.log(reverseNumber(321))
 
 
 function findMax(arr = []) {

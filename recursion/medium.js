@@ -6,7 +6,9 @@ function subseqeunce(arr=[],i,result=[],k){
         }
         if(sum===k){
             console.log(result)
+            return true;
         }
+        return false
     }
     result.push(arr[i])
     if(subseqeunce(arr,i+1,result,k)){
@@ -19,4 +21,4 @@ function subseqeunce(arr=[],i,result=[],k){
     }
     return false
 }
-console.log(subseqeunce([1,2,3,1],0,[],3))
+console.log(subseqeunce([1,2,3,1],0,[],5))
