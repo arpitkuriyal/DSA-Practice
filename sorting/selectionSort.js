@@ -1,13 +1,13 @@
 function selection_Sort(arr=[]){
     const num=arr.length
     for(let i=0;i<num-1;i++){
-        let mini=i
+        let miniIndex=i
         for(let j=i+1;j<num;j++){
-            if(arr[j]<arr[mini]){
-                mini=j;
+            if(arr[j]<arr[miniIndex]){
+                miniIndex=j;
             }
         }
-        [arr[i],arr[mini]]=[arr[mini],arr[i]]
+        [arr[i],arr[miniIndex]]=[arr[miniIndex],arr[i]]
     }
     return arr;
 }

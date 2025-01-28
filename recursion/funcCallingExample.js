@@ -36,4 +36,4 @@ function anything(n){
     console.log(n)
 }
 anything(6)
-//0 1 2 3 4 5 6 5 4 3 2 1 
+//654321123456
